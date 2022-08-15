@@ -5,7 +5,8 @@
 
 .App-header {
   background-color: #000000;
-  
+  border-radius: 1rem;
+  margin: 1rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,9 +15,17 @@
   color: white;
 }
 
+#learn-more:link {
+  text-decoration: none;
+  font-weight: bold;
+  color: brown;
+}
+
 .today {
   background-color: #111111;
   color: white;
+  border-radius: 1rem;
+  margin: 1rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
