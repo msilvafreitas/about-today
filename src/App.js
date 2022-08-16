@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './App.scss';
 
 
 function App() {
@@ -26,26 +26,7 @@ function App() {
           fetchData();
           
         }, []);
-        useEffect(() => {
-          const script = document.createElement('script');
-          script.src = "../src/api.js";
-          script.async = true;
-          document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-          }
-        }, []);
-        useEffect(() => {
-          const script = document.createElement('script');
-          script.src = "../src/ticker.js";
-          script.async = true;
-          document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-          }
-        }, []);
-
-
+        
   return (
     <div className="App">
       <header className='App-header'>
@@ -59,20 +40,42 @@ function App() {
           <a id="learn-more" href={today.api_response.url}>{today.api_response.date} on Wikipedia</a>
         </div>          
         
-        <div class="today" id="ticker">
-          <h2>Events</h2>
-          <div>
-            <ul id="events" class="ticker">
-              <li></li>
+        <div>
+          <div class="today">
+          <h2>Historical Events</h2><button>Show/Hide</button>
+            <ul id="events">
+            {
+                today.api_response.data.Events.map(event=>{
+                  return(<li>
+                    <p>{event.year} - {event.text}</p>
+                  </li>)
+                })
+              }
             </ul>
           </div>
-          <div>
-            <h2>Births</h2>
-            <ul id="births" class="ticker"></ul>
+          <div class="today">
+            <h2>Births</h2><button>Show/Hide</button>
+            <ul id="births">
+            {
+                today.api_response.data.Births.map(event=>{
+                  return(<li>
+                    <p>{event.year} - {event.text}</p>
+                  </li>)
+                })
+              }
+            </ul>
           </div>
-          <div>
-            <h2>Deaths</h2>
-            <ul id="deaths" class="ticker"></ul>
+          <div class="today">
+            <h2>Deaths</h2><button>Show/Hide</button>
+            <ul id="deaths">
+            {
+                today.api_response.data.Deaths.map(event=>{
+                  return(<li>
+                    <p>{event.year} - {event.text}</p>
+                  </li>)
+                })
+              }
+            </ul>
           </div>             
         </div>
       </section>

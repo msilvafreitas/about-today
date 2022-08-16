@@ -1,11 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,300&display=swap');
+
+$col-background: #f0f0f0;
+$col-text: #000000;
+
 .App {
   text-align: center;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
+
 .App-header {
-  background-color: #f0f0f0;
+  background-color: $col-background;
   border-radius: 1rem;
   margin: 1rem 3rem;
   display: flex;
@@ -13,7 +18,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #000000;
+  color: $col-text;
   box-shadow: rgb(120, 120, 120) 0 0 0.4rem;
 }
 
@@ -24,8 +29,8 @@
 }
 
 .today {
-  background-color: #f0f0f0;
-  color: #000000;
+  background-color: $col-background;
+  color: $col-text;
   border-radius: 1rem;
   margin: 1rem;
   padding: 1rem;
@@ -34,7 +39,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: rgb(120, 120, 120) 0 0 0.4rem;
+  p {
+    text-align: left;
+  }
 }
-.today p {
-  text-align: left;
-}/*# sourceMappingURL=App.css.map */
