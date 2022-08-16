@@ -24,6 +24,25 @@ function App() {
 
         useEffect(() => {
           fetchData();
+          
+        }, []);
+        useEffect(() => {
+          const script = document.createElement('script');
+          script.src = "../src/api.js";
+          script.async = true;
+          document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+          }
+        }, []);
+        useEffect(() => {
+          const script = document.createElement('script');
+          script.src = "../src/ticker.js";
+          script.async = true;
+          document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+          }
         }, []);
 
 
@@ -37,13 +56,15 @@ function App() {
         <section class="history">
         <a name="events"><h1 id="today">Today in History</h1></a>
         <div>
-          <a id="learn-more" href={today.api_response.url}>learn more on Wikipedia</a>
+          <a id="learn-more" href={today.api_response.url}>{today.api_response.date} on Wikipedia</a>
         </div>          
         
-        <div id="ticker">
+        <div class="today" id="ticker">
           <h2>Events</h2>
           <div>
-            <ul id="events" class="ticker"></ul>
+            <ul id="events" class="ticker">
+              <li></li>
+            </ul>
           </div>
           <div>
             <h2>Births</h2>
