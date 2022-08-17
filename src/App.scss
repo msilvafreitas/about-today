@@ -6,6 +6,7 @@ $col-text: #000000;
 .App {
   text-align: center;
   font-family: 'IBM Plex Mono', monospace;
+ 
 }
 
 
@@ -19,7 +20,8 @@ $col-text: #000000;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: $col-text;
-  box-shadow: rgb(120, 120, 120) 0 0 0.4rem;
+  box-shadow: rgb(224, 224, 224) 0 0 0.4rem;
+  border: 20px double white;
 }
 
 #learn-more:link {
@@ -36,9 +38,10 @@ $col-text: #000000;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  border: 20px double white;
   align-items: center;
   justify-content: center;
-  box-shadow: rgb(120, 120, 120) 0 0 0.4rem;
+  box-shadow: rgb(224, 224, 224) 0 0 0.4rem;
   p {
     text-align: left;
   }
