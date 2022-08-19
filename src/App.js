@@ -41,37 +41,19 @@ function App() {
           <div class="today">
           <h2>Historical Events</h2><button onClick={fetchData()}>Show/Hide</button>
             <ul id="events">
-            {
-                today.api_response.data.Events.map(event=>{
-                  return(<li className='event'>
-                    <p>{event.year} - {event.text}</p>
-                  </li>)
-                })
-              }
+            
             </ul>
           </div>
           <div class="today">
             <h2>Births</h2><button>Show/Hide</button>
             <ul id="births">
-            {
-                today.api_response.data.Births.map(birth=>{
-                  return(<li className='birth'>
-                    <p>{birth.year} - {birth.text}</p>
-                  </li>)
-                })
-              }
+            
             </ul>
           </div>
           <div class="today">
             <h2>Deaths</h2><button>Show/Hide</button>
             <ul id="deaths">
-            {
-                today.api_response.data.Deaths.map(death=>{
-                  return(<li className='death'>
-                    <p>{death.year} - {death.text}</p>
-                  </li>)
-                })
-              }
+            
             </ul>
           </div>             
         </div>
