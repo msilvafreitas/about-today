@@ -41,7 +41,7 @@ function App() {
             <h2>Historical Events</h2>
             <ul>
               {events.map(i => (
-                <li>{i.year} - {i.text}</li>
+                <li className='event'>{i.year} - {i.text}</li>
               ))}
             </ul>
           </div>
@@ -49,7 +49,7 @@ function App() {
             <h2>Births</h2>
             <ul id="births">
               {births.map(i => (
-                <li>{i.year} - {i.text}</li>
+                <li className='birth'>{i.year} - {i.text}</li>
               ))}
             </ul>
           </div>
@@ -57,7 +57,7 @@ function App() {
             <h2>Deaths</h2>
             <ul id="deaths">
               {deaths.map(i => (
-                <li>{i.year} - {i.text}</li>
+                <li className='death'>{i.year} - {i.text}</li>
               ))}
             </ul>
           </div>
