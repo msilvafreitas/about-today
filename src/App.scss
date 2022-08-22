@@ -9,6 +9,18 @@ $col-text: #000000;
  
 }
 
+@media screen and (min-width: 970px){
+    .app {
+      display: grid;
+      grid-template-areas: 'menu content content' ;
+    }
+    .App-header {
+      grid-area: menu;
+    }
+    .history {
+      grid-area: content;
+    }
+}
 
 .App-header {
   background-color: $col-background;
@@ -44,6 +56,7 @@ $col-text: #000000;
   box-shadow: rgb(224, 224, 224) 0 0 0.4rem;
   li {
     text-align: left;
+    line-height: 2rem;
   }
   .event {
     list-style-type: "\23F3";

@@ -33,7 +33,7 @@ function App() {
       <section class="history">
         <a name="events"><h1 id="today">Today in History</h1></a>
         <div>
-
+          <a id="learn-more" href={today.url}>{today.date} on Wikipedia</a>
         </div>
 
         <div>
