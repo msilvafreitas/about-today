@@ -25,16 +25,19 @@ function App() {
 
   return (
     <div className="App">
+      <div className='mobile'>
+      <div className='menu'>
       <header className='App-header'>
         <h1>About Today</h1>
         <h5>Welcome! Today is {today.date} </h5>
       </header>
-
-      <section class="history">
         <a name="events"><h1 id="today">Today in History</h1></a>
         <div>
           <a id="learn-more" href={today.url}>{today.date} on Wikipedia</a>
         </div>
+      </div>
+
+      <section class="history">
 
         <div>
           <div class="today">
@@ -63,6 +66,7 @@ function App() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }
