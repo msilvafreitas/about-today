@@ -10,16 +10,18 @@ $col-prm: brown;
  
 }
 
-@media screen and (min-width: 970px){
+@media screen and (min-width: 1030px){
     .mobile {
       display: grid;
       grid-template-areas: 'menu content content' ;
     }
     .menu {
       grid-area: menu;
+      width: 45vw;
     }
     .history {
       grid-area: content;
+      width: 55vw;
     }
 }
 
@@ -37,7 +39,7 @@ $col-prm: brown;
   border: 20px double white;
 }
 
-#learn-more:link {
+#learn-more:link, #learn-more:visited {
   text-decoration: none;
   font-weight: bold;
   color: $col-prm;
@@ -76,5 +78,13 @@ $col-prm: brown;
   }
   .death {
     list-style-type: "\1F480";
+  }
+}
+
+footer {
+  font-size: 0.8rem;
+  color: #696969;
+  :link, :visited {
+    color: $col-prm;
   }
 }

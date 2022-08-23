@@ -51,6 +51,7 @@ function App() {
         <div>
           <a id="learn-more" href={today.url}>{today.date} on Wikipedia</a>
         </div>
+        
       </div>
 
       <section class="history">
@@ -96,6 +97,9 @@ function App() {
         </div>
       </section>
       </div>
+      <footer>
+        <p>Made by Matheus Freitas - <a href='https://www.linkedin.com/in/msilvafreitas/'>LinkedIn</a> - <a href='https://github.com/msilvafreitas'>GitHub</a> </p>
+      </footer>
     </div>
   );
 }
