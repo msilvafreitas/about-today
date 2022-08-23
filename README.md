@@ -23,6 +23,8 @@ This is a simple webpage made with React consuming an API with data from Wikiped
 ## Images
 
 Mobile: 
+
+
 ![image](https://user-images.githubusercontent.com/108239154/186061989-2ac4fad8-89a0-482a-bc31-c31cd3389741.png)
 
 
