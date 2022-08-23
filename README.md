@@ -8,6 +8,7 @@ This is a simple webpage made with React consuming an API with data from Wikiped
 ## Build With
 
 - ReactJS
+- Sass
 - Mobile First Workflow
 - Responsive Design
 
