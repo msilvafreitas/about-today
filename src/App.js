@@ -4,11 +4,15 @@ import './App.scss';
 
 function App() {
 
-
+  
+  
   let [today, setToday] = useState({});
   let [births, setBirths] = useState([]);
   let [events, setEvents] = useState([]);
   let [deaths, setDeaths] = useState([]);
+  let [showEvents, setShowEvents] = useState(false);
+  let [showBirths, setShowBirths] = useState(false);
+  let [showDeaths, setShowDeaths] = useState(false);
 
   let api_url = 'https://history.muffinlabs.com/date';
 
@@ -22,6 +26,18 @@ function App() {
         setDeaths(res.data.Deaths);
       });
   }, []);
+
+  function toggleEvents() {
+    setShowEvents(current => !current)
+  }
+  function toggleBirths() {
+    setShowBirths(current => !current)
+  }
+  function toggleDeaths() {
+    setShowDeaths(current => !current)
+  }
+ 
+ 
 
   return (
     <div className="App">
@@ -42,26 +58,39 @@ function App() {
         <div>
           <div class="today">
             <h2>Historical Events</h2>
+            <button onClick={toggleEvents}>Show/Hide</button>
             <ul>
+              {showEvents && 
+              <div>
               {events.map(i => (
                 <li className='event'>{i.year} - {i.text}</li>
-              ))}
+              ))}</div> }
             </ul>
           </div>
           <div class="today">
             <h2>Births</h2>
+            <button onClick={toggleBirths}>Show/Hide</button>
             <ul id="births">
+              {showBirths &&
+              <div>
               {births.map(i => (
                 <li className='birth'>{i.year} - {i.text}</li>
-              ))}
+              ))} 
+              </div>
+              }
             </ul>
           </div>
           <div class="today">
             <h2>Deaths</h2>
+            <button onClick={toggleDeaths}>Show/Hide</button>
             <ul id="deaths">
+              {showDeaths &&
+              <div>
               {deaths.map(i => (
                 <li className='death'>{i.year} - {i.text}</li>
-              ))}
+              ))} 
+              </div>
+              }
             </ul>
           </div>
         </div>
