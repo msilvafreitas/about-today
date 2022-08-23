@@ -26,7 +26,7 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: #000000;
-  box-shadow: rgb(224, 224, 224) 0 0 0.4rem;
+  box-shadow: rgb(193, 193, 193) 0 0 0.4rem;
   border: 20px double white;
 }
 
@@ -47,11 +47,20 @@
   border: 20px double white;
   align-items: center;
   justify-content: center;
-  box-shadow: rgb(224, 224, 224) 0 0 0.4rem;
+  box-shadow: rgb(193, 193, 193) 0 0 0.4rem;
 }
 .today li {
   text-align: left;
   line-height: 2rem;
+}
+.today button {
+  background-color: brown;
+  padding: 0.1rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  box-shadow: brown 0 0 2px;
 }
 .today .event {
   list-style-type: "⏳";
