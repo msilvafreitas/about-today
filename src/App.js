@@ -51,7 +51,12 @@ function App() {
         <div>
           <a id="learn-more" href={today.url}>{today.date} on Wikipedia</a>
         </div>
-        
+        <br></br>
+        <p>Select a different day:</p>
+        <label>Day</label>
+        <input></input>
+        <label>Month</label>
+        <input></input>
       </div>
 
       <section class="history">
